@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap");
+
+:root {
+    font-family: "Space Grotesk", Inter, system-ui, Avenir, Helvetica, Arial,
+        sans-serif;
+
+    /* font-synthesis: none; */
+    text-rendering: optimizeLegibility;
+    /* -webkit-font-smoothing: antialiased; */
+    /* -moz-osx-font-smoothing: grayscale; */
+    /* -webkit-text-size-adjust: 100%; */
+
+    --black-60-: #151515;
+    --black-30-: #242424;
+    --white-60-: #ffffff;
+    --white-30-: #d9d9d9;
+    --accent-: #4ee1a0;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--black-60-);
+}
+
+#root {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    max-width: 90%;
+    gap: 8.75rem;
+}
+
+h1 {
+    font-size: 5.5rem;
+    line-height: 5.5rem;
+    letter-spacing: -0.15625rem;
+    font-weight: 700;
+    color: var(--white-60-);
+}
+
+h2 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    letter-spacing: -0.09375rem;
+    font-weight: 700;
+    color: var(--white-60-);
+}
+
+h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    color: var(--white-60-);
+}
+
+p {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: var(--white-30-);
+}
