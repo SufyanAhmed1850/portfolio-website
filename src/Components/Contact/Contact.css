@@ -1,0 +1,51 @@
+.contact {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5.75rem;
+}
+
+.contact > div {
+    flex-basis: 40%;
+}
+
+.contact-body {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+}
+
+.qoute {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.qoute input,
+.qoute textarea {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0.25rem 1rem 1rem 1rem;
+    border-bottom: 1px solid var(--white-60-);
+}
+
+.qoute textarea {
+    height: 110px;
+    resize: none;
+}
+
+.qoute .btn {
+    align-self: flex-end;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    letter-spacing: 0.143125rem;
+    font-weight: 700;
+    color: var(--white-60-);
+    padding-bottom: 0.425rem;
+    border-bottom: 0.125rem solid var(--accent-);
+    cursor: pointer;
+}
+
+.qoute .btn:hover {
+    color: var(--accent-);
+}

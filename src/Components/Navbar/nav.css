@@ -1,0 +1,17 @@
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2.4375rem 0;
+}
+
+header .logo {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+header .icons {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
