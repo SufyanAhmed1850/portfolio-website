@@ -34,18 +34,20 @@
     resize: none;
 }
 
-.qoute .btn {
+.btn {
+    width: max-content;
     align-self: flex-end;
     font-size: 1rem;
     line-height: 1.625rem;
     letter-spacing: 0.143125rem;
     font-weight: 700;
     color: var(--white-60-);
+}
+.btn span {
     padding-bottom: 0.425rem;
     border-bottom: 0.125rem solid var(--accent-);
     cursor: pointer;
 }
-
-.qoute .btn:hover {
+.btn span:hover {
     color: var(--accent-);
 }
