@@ -4,3 +4,9 @@
     align-items: flex-start;
     gap: 0.875rem;
 }
+
+@media (width<=600px) {
+    .skill {
+        align-items: center;
+    }
+}

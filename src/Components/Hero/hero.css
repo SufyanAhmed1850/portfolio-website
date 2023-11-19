@@ -3,11 +3,17 @@
     margin-bottom: 13.6875rem;
     display: flex;
     flex-direction: column;
-    gap: 4.125rem;
+    gap: 3rem;
+}
+
+.hero-title {
+    max-width: 790px;
+    width: 68%;
 }
 
 .hero-title .name {
     position: relative;
+    white-space: nowrap;
 }
 
 .hero-title .name::after {
@@ -23,4 +29,65 @@
 
 .hero-body {
     max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+
+@media (width<=1223px) {
+    .hero-title h1 {
+        font-size: 5rem;
+        line-height: 5rem;
+    }
+}
+@media (width<=1106px) {
+    .hero-title h1 {
+        font-size: 4.5rem;
+        line-height: 4.5rem;
+    }
+    .hero {
+        margin-bottom: 14.625rem;
+    }
+}
+@media (width<=988px) {
+    .hero {
+        margin-bottom: 10.75rem;
+    }
+}
+@media (width<=800px) {
+    .hero-title h1 {
+        font-size: 3.5rem;
+        line-height: 3.875rem;
+    }
+    .hero {
+        margin-top: 5.625rem;
+        margin-bottom: 12.75rem;
+        gap: 2.5rem;
+    }
+    .hero-body {
+        gap: 1.5rem;
+    }
+}
+@media (width<=753px) {
+    .hero {
+        margin-bottom: 8.875rem;
+    }
+}
+@media (width<=630px) {
+    .hero {
+        margin-bottom: 6.875rem;
+    }
+}
+@media (width<=600px) {
+    .hero {
+        margin-top: 27rem;
+        align-items: center;
+        text-align: center;
+    }
+    .hero-title {
+        width: 100%;
+    }
+    .hero-body {
+        width: 100%;
+    }
 }

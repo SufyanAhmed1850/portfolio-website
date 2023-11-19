@@ -25,6 +25,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 input::placeholder,
 textarea::placeholder {
     font-family: "Space Grotesk", Inter, system-ui, Avenir, Helvetica, Arial,
@@ -86,6 +90,12 @@ footer > div {
     margin-bottom: 1.25rem;
 }
 
+a {
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
 h1 {
     font-size: 5.5rem;
     line-height: 5.5rem;
@@ -113,4 +123,10 @@ p {
     font-size: 1.125rem;
     line-height: 1.75rem;
     color: var(--white-30-);
+}
+
+@media (width <=768px) {
+    h1 {
+        font-size: 4.5rem;
+    }
 }

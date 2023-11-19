@@ -1,11 +1,15 @@
 .contact {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 5.75rem;
+    gap: 1.875rem;
 }
 
-.contact > div {
-    flex-basis: 40%;
+.contact > div,
+form {
+    width: 40%;
+    min-width: 330px;
 }
 
 .contact-body {
@@ -20,13 +24,18 @@
     gap: 2rem;
 }
 
-.qoute input,
+.qoute input:not(.submit-btn),
 .qoute textarea {
     background-color: transparent;
     border: none;
     outline: none;
     padding: 0.25rem 1rem 1rem 1rem;
     border-bottom: 1px solid var(--white-60-);
+}
+
+.qoute input:not(.submit-btn):focus,
+.qoute textarea:focus {
+    border-bottom: 1px solid var(--accent-);
 }
 
 .qoute textarea {
@@ -43,11 +52,30 @@
     font-weight: 700;
     color: var(--white-60-);
 }
-.btn span {
+.btn .submit-btn {
+    border: none;
+    outline: none;
     padding-bottom: 0.425rem;
     border-bottom: 0.125rem solid var(--accent-);
     cursor: pointer;
+    width: max-content;
+    background-color: transparent;
+    text-align: left;
 }
-.btn span:hover {
+.btn .submit-btn:hover {
     color: var(--accent-);
+}
+
+@media (width <=768px) {
+    .contact {
+        justify-content: center;
+        margin-bottom: 5.75rem;
+        gap: 1.875rem;
+    }
+
+    .contact > div,
+    form {
+        max-width: 445px;
+        width: 100%;
+    }
 }

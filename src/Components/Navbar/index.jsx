@@ -3,19 +3,51 @@ import githubIcon from "../../assets/github.svg";
 import linkedInIcon from "../../assets/LinkedIn.svg";
 import twitterIcon from "../../assets/twitter.svg";
 import whatsappIcon from "../../assets/whatsapp.svg";
+import profilePicDesk from "../../assets/image-profile-desktop.webp";
+import profilePicTab from "../../assets/image-profile-tablet.webp";
+import profilePicMob from "../../assets/image-profile-mobile.webp";
+import { useEffect, useState } from "react";
 
-const Navbar = () => {
+const Navbar = ({ profileImageBoolean }) => {
+    const [src, setSrc] = useState();
+    useEffect(() => {
+        if (window.innerWidth > 768) {
+            setSrc(profilePicDesk);
+        } else if (window.innerWidth > 600 && window.innerWidth <= 768) {
+            setSrc(profilePicTab);
+        } else if (window.innerWidth <= 600) {
+            setSrc(profilePicMob);
+        }
+    }, []);
+    console.log("src", src);
+    console.log("WIDTH", window.innerWidth);
     return (
-        <header>
+        <header className="nav-header">
             <div>
                 <h3 className="logo">sufyanahmed</h3>
             </div>
             <div className="icons">
-                <img src={githubIcon} alt="github" />
-                <img src={linkedInIcon} alt="linkedIn" />
-                <img src={whatsappIcon} alt="twitter" />
-                <img src={twitterIcon} alt="twitter" />
+                <a href="https://github.com/SufyanAhmed1850" target="_blank">
+                    <img src={githubIcon} alt="github" />
+                </a>
+                <a
+                    href="https://www.linkedin.com/in/SufyanAhmed1850"
+                    target="_blank"
+                >
+                    <img src={linkedInIcon} alt="linkedIn" />
+                </a>
+                <a href="https://wa.me/923327319831" target="_blank">
+                    <img src={whatsappIcon} alt="twitter" />
+                </a>
+                <a href="https://twitter.com/devsufyan" target="_blank">
+                    <img src={twitterIcon} alt="twitter" />
+                </a>
             </div>
+            {profileImageBoolean && (
+                <div className="nav-profile-image">
+                    <img src={src} alt="Profile Picture" />
+                </div>
+            )}
         </header>
     );
 };

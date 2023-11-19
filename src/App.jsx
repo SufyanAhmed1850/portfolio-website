@@ -8,7 +8,7 @@ function App() {
     return (
         <>
             <main>
-                <Navbar />
+                <Navbar profileImageBoolean="true"/>
                 <Hero />
                 <Skills />
                 <Projects />

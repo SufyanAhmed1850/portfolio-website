@@ -6,22 +6,28 @@ const Project = ({ img, title, techs }) => {
 
     return (
         <div
-            onMouseEnter={() => setShowOverlay(true)}
-            onMouseLeave={() => setShowOverlay(false)}
+            onMouseEnter={() => {
+                window.innerWidth >= 768 && setShowOverlay(true);
+            }}
+            onMouseLeave={() => {
+                window.innerWidth >= 768 && setShowOverlay(false);
+            }}
             className={`project ${showOverlay ? "overlay-active" : ""}`}
         >
             <div className="img-container">
                 <img src={img} alt={title} />
-                <div className="overlay">
-                    <div className="overlay-btn">
-                        <div className="btn">
-                            <span>VIEW PROJECT</span>
-                        </div>
-                        <div className="btn">
-                            <span>VIEW CODE</span>
+                {window.innerWidth > 768 && (
+                    <div className="overlay">
+                        <div className="overlay-btn">
+                            <div className="btn">
+                                <span className="submit-btn">VIEW PROJECT</span>
+                            </div>
+                            <div className="btn">
+                                <span className="submit-btn">VIEW CODE</span>
+                            </div>
                         </div>
                     </div>
-                </div>
+                )}
             </div>
             <div>
                 <h3>{title}</h3>
@@ -31,6 +37,16 @@ const Project = ({ img, title, techs }) => {
                     })}
                 </div>
             </div>
+            {window.innerWidth <= 768 && (
+                <div className="tab-btn-container">
+                    <div className="btn">
+                        <span className="submit-btn">VIEW PROJECT</span>
+                    </div>
+                    <div className="btn">
+                        <span className="submit-btn">VIEW CODE</span>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
