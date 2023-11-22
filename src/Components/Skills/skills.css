@@ -12,6 +12,11 @@
     cursor: pointer;
 }
 
+@media (width<=800px) {
+    .skills-container {
+        margin-bottom: 6.25rem;
+    }
+}
 @media (width<=768px) {
     .skills-container .skill {
         flex-basis: calc(100% / 2);
@@ -21,7 +26,7 @@
         row-gap: 3.25rem;
     }
 }
-@media (width<=600px) {
+@media (width<=400px) {
     .skills-container {
         flex-direction: column;
         align-items: center;

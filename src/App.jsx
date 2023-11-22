@@ -8,7 +8,7 @@ function App() {
     return (
         <>
             <main>
-                <Navbar profileImageBoolean="true"/>
+                <Navbar profileImageBoolean="true" />
                 <Hero />
                 <Skills />
                 <Projects />
@@ -17,7 +17,7 @@ function App() {
                 <div>
                     <Contact />
                     <div className="nav-bottom">
-                        <Navbar />
+                        <Navbar bottom="2.5rem" />
                     </div>
                 </div>
             </footer>

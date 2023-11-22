@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 5.75rem;
-    gap: 1.875rem;
+    gap: 3rem;
 }
 
 .contact > div,
@@ -69,13 +69,17 @@ form {
 @media (width <=768px) {
     .contact {
         justify-content: center;
-        margin-bottom: 5.75rem;
-        gap: 1.875rem;
     }
 
     .contact > div,
     form {
         max-width: 445px;
         width: 100%;
+    }
+    .contact-body {
+        gap: 1.25rem;
+    }
+    .contact-body > *{
+        text-align: center;
     }
 }

@@ -1,9 +1,10 @@
 .hero {
     margin-top: 7.9375rem;
-    margin-bottom: 13.6875rem;
+    margin-bottom: 12.6875rem;
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    min-height: 430px;
 }
 
 .hero-title {
@@ -45,14 +46,6 @@
         font-size: 4.5rem;
         line-height: 4.5rem;
     }
-    .hero {
-        margin-bottom: 14.625rem;
-    }
-}
-@media (width<=988px) {
-    .hero {
-        margin-bottom: 10.75rem;
-    }
 }
 @media (width<=800px) {
     .hero-title h1 {
@@ -61,28 +54,20 @@
     }
     .hero {
         margin-top: 5.625rem;
-        margin-bottom: 12.75rem;
+        margin-bottom: 3.75rem;
         gap: 2.5rem;
     }
     .hero-body {
         gap: 1.5rem;
     }
 }
-@media (width<=753px) {
-    .hero {
-        margin-bottom: 8.875rem;
-    }
-}
-@media (width<=630px) {
-    .hero {
-        margin-bottom: 6.875rem;
-    }
-}
 @media (width<=600px) {
     .hero {
         margin-top: 27rem;
+        margin-bottom: 5rem;
         align-items: center;
         text-align: center;
+        min-height: auto;
     }
     .hero-title {
         width: 100%;

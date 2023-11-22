@@ -8,7 +8,7 @@ import profilePicTab from "../../assets/image-profile-tablet.webp";
 import profilePicMob from "../../assets/image-profile-mobile.webp";
 import { useEffect, useState } from "react";
 
-const Navbar = ({ profileImageBoolean }) => {
+const Navbar = ({ profileImageBoolean, bottom }) => {
     const [src, setSrc] = useState();
     useEffect(() => {
         if (window.innerWidth > 768) {
@@ -22,7 +22,10 @@ const Navbar = ({ profileImageBoolean }) => {
     console.log("src", src);
     console.log("WIDTH", window.innerWidth);
     return (
-        <header className="nav-header">
+        <header
+            className="nav-header"
+            style={{ paddingBottom: bottom || 0 + "px" }}
+        >
             <div>
                 <h3 className="logo">sufyanahmed</h3>
             </div>
