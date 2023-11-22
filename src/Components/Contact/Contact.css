@@ -68,7 +68,9 @@ form {
 
 @media (width <=768px) {
     .contact {
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
 
     .contact > div,
@@ -82,4 +84,11 @@ form {
     .contact-body > *{
         text-align: center;
     }
+}
+
+@media (width <=768px) {
+.contact > div,
+form {
+    min-width: auto;
+}
 }
