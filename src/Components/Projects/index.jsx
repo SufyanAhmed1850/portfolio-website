@@ -1,13 +1,6 @@
 import Button from "../Button";
 import Project from "./Project";
 import "./projects.css";
-import DevLinks from "../../assets/portfolio-dev-links.jpg";
-import DevFinder from "../../assets/portfolio-dev-finder.jpg";
-import Planets from "../../assets/portfolio-planets.jpg";
-import SpeedyTv from "../../assets/portfolio-speedy-tv.jpg";
-import Techoniq from "../../assets/portfolio-techoniq.jpg";
-import OldPortfolio from "../../assets/portfolio-old-portfolio.jpg";
-import Todo from "../../assets/portfolio-todo.jpg";
 
 const Projects = () => {
     const projects = [
