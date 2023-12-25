@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./project.css";
 
-const Project = ({ img, title, techs }) => {
+const Project = ({ img, title, techs, code, project }) => {
     const [showOverlay, setShowOverlay] = useState(false);
 
     return (
@@ -19,12 +19,22 @@ const Project = ({ img, title, techs }) => {
                 {window.innerWidth > 768 && (
                     <div className="overlay">
                         <div className="overlay-btn">
-                            <div className="btn">
+                            <a
+                                href={project}
+                                target="_blank"
+                                rel="external"
+                                className="btn"
+                            >
                                 <span className="submit-btn">VIEW PROJECT</span>
-                            </div>
-                            <div className="btn">
+                            </a>
+                            <a
+                                href={code}
+                                target="_blank"
+                                rel="external"
+                                className="btn"
+                            >
                                 <span className="submit-btn">VIEW CODE</span>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 )}
@@ -39,12 +49,22 @@ const Project = ({ img, title, techs }) => {
             </div>
             {window.innerWidth <= 768 && (
                 <div className="tab-btn-container">
-                    <div className="btn">
+                    <a
+                        href={project}
+                        target="_blank"
+                        rel="external"
+                        className="btn"
+                    >
                         <span className="submit-btn">VIEW PROJECT</span>
-                    </div>
-                    <div className="btn">
+                    </a>
+                    <a
+                        href={code}
+                        target="_blank"
+                        rel="external"
+                        className="btn"
+                    >
                         <span className="submit-btn">VIEW CODE</span>
-                    </div>
+                    </a>
                 </div>
             )}
         </div>
