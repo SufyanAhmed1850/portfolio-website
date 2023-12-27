@@ -3,7 +3,7 @@ import githubIcon from "../../assets/github.svg";
 import linkedInIcon from "../../assets/LinkedIn.svg";
 import twitterIcon from "../../assets/twitter.svg";
 import whatsappIcon from "../../assets/whatsapp.svg";
-// import profilePicDesk from "../../assets/image-profile-desktop.webp";
+import profilePicDesk from "../../assets/image-profile-desktop.webp";
 import profilePicTab from "../../assets/image-profile-tablet.webp";
 import profilePicMob from "../../assets/image-profile-mobile.webp";
 import { useEffect, useState } from "react";
@@ -12,9 +12,7 @@ const Navbar = ({ profileImageBoolean, bottom }) => {
     const [src, setSrc] = useState();
     useEffect(() => {
         if (window.innerWidth > 768) {
-            setSrc(
-                "https://ik.imagekit.io/trq2g9kv5/image-profile-desktop.webp",
-            );
+            setSrc(profilePicDesk);
         } else if (window.innerWidth > 600 && window.innerWidth <= 768) {
             setSrc(profilePicTab);
         } else if (window.innerWidth <= 600) {
