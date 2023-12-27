@@ -13,7 +13,7 @@ const Navbar = ({ profileImageBoolean, bottom }) => {
     useEffect(() => {
         if (window.innerWidth > 768) {
             setSrc(
-                "https://res.cloudinary.com/dke5jqhus/image/upload/f_webp/v1703679216/dev_links/f130bc1rhziufdfmept6.webp",
+                "https://ik.imagekit.io/trq2g9kv5/image-profile-desktop.webp",
             );
         } else if (window.innerWidth > 600 && window.innerWidth <= 768) {
             setSrc(profilePicTab);
