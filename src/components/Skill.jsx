@@ -1,4 +1,4 @@
-import "./skill.css";
+import "@components/css/Skill.css";
 
 const Skill = ({ title, exp }) => {
     return (

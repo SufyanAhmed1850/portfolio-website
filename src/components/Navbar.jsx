@@ -1,11 +1,11 @@
-import "./nav.css";
-import githubIcon from "../../assets/github.svg";
-import linkedInIcon from "../../assets/LinkedIn.svg";
-import twitterIcon from "../../assets/twitter.svg";
-import whatsappIcon from "../../assets/whatsapp.svg";
-import profilePicDesk from "../../assets/image-profile-desktop.webp";
-import profilePicTab from "../../assets/image-profile-tablet.webp";
-import profilePicMob from "../../assets/image-profile-mobile.webp";
+import "@components/css/Nav.css";
+import githubIcon from "@assets/github.svg";
+import linkedInIcon from "@assets/LinkedIn.svg";
+import twitterIcon from "@assets/twitter.svg";
+import whatsappIcon from "@assets/whatsapp.svg";
+import profilePicDesk from "@assets/image-profile-desktop.webp";
+import profilePicTab from "@assets/image-profile-tablet.webp";
+import profilePicMob from "@assets/image-profile-mobile.webp";
 import { useEffect, useState } from "react";
 
 const Navbar = ({ profileImageBoolean, bottom }) => {
@@ -19,8 +19,6 @@ const Navbar = ({ profileImageBoolean, bottom }) => {
             setSrc(profilePicMob);
         }
     }, []);
-    console.log("src", src);
-    console.log("WIDTH", window.innerWidth);
     return (
         <header
             className="nav-header"

@@ -1,6 +1,6 @@
-import Button from "../Button";
-import Project from "./Project";
-import "./projects.css";
+import Button from "@components/Button";
+import Project from "@components/Project";
+import "@components/css/Projects.css";
 
 const Projects = () => {
     const projects = [

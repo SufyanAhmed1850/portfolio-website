@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./project.css";
+import "@components/css/Project.css";
 
 const Project = ({ img, title, techs, code, project }) => {
     const [showOverlay, setShowOverlay] = useState(false);
@@ -15,14 +15,14 @@ const Project = ({ img, title, techs, code, project }) => {
             className={`project ${showOverlay ? "overlay-active" : ""}`}
         >
             <div className="img-container">
-                <img src={img} alt={title} />
+                <img src={img} alt={title} loading="lazy" />
                 {window.innerWidth > 768 && (
                     <div className="overlay">
                         <div className="overlay-btn">
                             <a
                                 href={project}
                                 target="_blank"
-                                rel="external"
+                                rel="noopener noreferrer"
                                 className="btn"
                             >
                                 <span className="submit-btn">VIEW PROJECT</span>
@@ -30,7 +30,7 @@ const Project = ({ img, title, techs, code, project }) => {
                             <a
                                 href={code}
                                 target="_blank"
-                                rel="external"
+                                rel="noopener noreferrer"
                                 className="btn"
                             >
                                 <span className="submit-btn">VIEW CODE</span>
@@ -43,7 +43,7 @@ const Project = ({ img, title, techs, code, project }) => {
                 <h3>{title}</h3>
                 <div className="tech">
                     {techs.map((tech, ind) => {
-                        return <p key={ind}>{tech}</p>;
+                        return <p key={tech}>{tech}</p>;
                     })}
                 </div>
             </div>
@@ -52,7 +52,7 @@ const Project = ({ img, title, techs, code, project }) => {
                     <a
                         href={project}
                         target="_blank"
-                        rel="external"
+                        rel="noopener noreferrer"
                         className="btn"
                     >
                         <span className="submit-btn">VIEW PROJECT</span>
@@ -60,7 +60,7 @@ const Project = ({ img, title, techs, code, project }) => {
                     <a
                         href={code}
                         target="_blank"
-                        rel="external"
+                        rel="noopener noreferrer"
                         className="btn"
                     >
                         <span className="submit-btn">VIEW CODE</span>

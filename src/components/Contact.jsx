@@ -1,7 +1,6 @@
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
-import Button from "../Button";
-import "./Contact.css";
+import "@components/css/Contact.css";
 
 const Contact = () => {
     const [qouteName, setQouteName] = useState("");
@@ -15,20 +14,18 @@ const Contact = () => {
                 import.meta.env.VITE_SERVICE_ID,
                 import.meta.env.VITE_TEMPLATE_ID,
                 form.current,
-                import.meta.env.VITE_PUBLIC_KEY
+                import.meta.env.VITE_PUBLIC_KEY,
             )
             .then(
                 (result) => {
                     alert("Sent Successfully.");
-                    console.log(result.text);
                     setQouteName("");
                     setEmail("");
                     setMessage("");
                 },
                 (error) => {
                     alert("There was an error while sending your qoute.");
-                    console.log(error.text);
-                }
+                },
             );
     };
 

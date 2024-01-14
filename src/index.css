@@ -4,11 +4,7 @@
     font-family: "Space Grotesk", Inter, system-ui, Avenir, Helvetica, Arial,
         sans-serif;
 
-    /* font-synthesis: none; */
     text-rendering: optimizeLegibility;
-    /* -webkit-font-smoothing: antialiased; */
-    /* -moz-osx-font-smoothing: grayscale; */
-    /* -webkit-text-size-adjust: 100%; */
 
     --black-60-: #151515;
     --black-30-: #242424;

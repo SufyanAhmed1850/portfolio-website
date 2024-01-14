@@ -1,8 +1,8 @@
-import Hero from "./Components/Hero";
-import Navbar from "./Components/Navbar";
-import Skills from "./Components/Skills";
-import Projects from "./Components/Projects";
-import Contact from "./Components/Contact";
+import Hero from "@components/Hero";
+import Navbar from "@components/Navbar";
+import Skills from "@components/Skills";
+import Projects from "@components/Projects";
+import Contact from "@components/Contact";
 
 function App() {
     return (

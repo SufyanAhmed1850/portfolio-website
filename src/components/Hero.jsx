@@ -1,5 +1,5 @@
-import "./hero.css";
-import Button from "../Button";
+import "@components/css/Hero.css";
+import Button from "@components/Button";
 
 const Hero = () => {
     return (
