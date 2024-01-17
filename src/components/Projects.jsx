@@ -1,6 +1,8 @@
 import Button from "@components/Button";
 import Project from "@components/Project";
 import "@components/css/Projects.css";
+import { useContext } from "react";
+import { CursorContext } from "../context/CursorContext";
 
 const Projects = () => {
     const projects = [
@@ -54,10 +56,17 @@ const Projects = () => {
             techs: ["HTML", "CSS"],
         },
     ];
+    const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
     return (
         <div className="projects-container">
             <div className="header">
-                <h1>Projects</h1>
+                <h1
+                    onMouseEnter={() => mouseEnterHandler("large")}
+                    onMouseLeave={mouseLeaveHandler}
+                    style={{ cursor: "default" }}
+                >
+                    Projects
+                </h1>
                 <Button text="MORE WORK" />
             </div>
             <div className="body">

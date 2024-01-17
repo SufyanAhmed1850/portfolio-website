@@ -8,8 +8,11 @@ import profilePicTab from "@assets/image-profile-tablet.webp";
 import profilePicMob from "@assets/image-profile-mobile.webp";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { useContext } from "react";
+import { CursorContext } from "../context/CursorContext";
 
 const Navbar = ({ profileImageBoolean, bottom }) => {
+    const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
     const [src, setSrc] = useState();
     useEffect(() => {
         if (window.innerWidth > 768) {
@@ -26,22 +29,50 @@ const Navbar = ({ profileImageBoolean, bottom }) => {
             style={{ paddingBottom: bottom || 0 + "px" }}
         >
             <div>
-                <h3 className="logo">sufyanahmed</h3>
+                <h3
+                    className="logo"
+                    onMouseEnter={() => mouseEnterHandler("medium")}
+                    onMouseLeave={mouseLeaveHandler}
+                    style={{ cursor: "default" }}
+                >
+                    sufyanahmed
+                </h3>
             </div>
             <div className="icons">
-                <a href="https://github.com/SufyanAhmed1850" target="_blank">
+                <a
+                    href="https://github.com/SufyanAhmed1850"
+                    target="_blank"
+                    onMouseEnter={() => mouseEnterHandler("small")}
+                    onMouseLeave={mouseLeaveHandler}
+                    style={{ cursor: "pointer" }}
+                >
                     <img src={githubIcon} alt="github" />
                 </a>
                 <a
                     href="https://www.linkedin.com/in/SufyanAhmed1850"
                     target="_blank"
+                    onMouseEnter={() => mouseEnterHandler("small")}
+                    onMouseLeave={mouseLeaveHandler}
+                    style={{ cursor: "pointer" }}
                 >
                     <img src={linkedInIcon} alt="linkedIn" />
                 </a>
-                <a href="https://wa.me/923327319831" target="_blank">
+                <a
+                    href="https://wa.me/923327319831"
+                    target="_blank"
+                    onMouseEnter={() => mouseEnterHandler("small")}
+                    onMouseLeave={mouseLeaveHandler}
+                    style={{ cursor: "pointer" }}
+                >
                     <img src={whatsappIcon} alt="twitter" />
                 </a>
-                <a href="https://twitter.com/devsufyan" target="_blank">
+                <a
+                    href="https://twitter.com/devsufyan"
+                    target="_blank"
+                    onMouseEnter={() => mouseEnterHandler("small")}
+                    onMouseLeave={mouseLeaveHandler}
+                    style={{ cursor: "pointer" }}
+                >
                     <img src={twitterIcon} alt="twitter" />
                 </a>
             </div>
@@ -51,7 +82,7 @@ const Navbar = ({ profileImageBoolean, bottom }) => {
                         initial={{
                             clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",
                             scale: 1.2,
-                            y: -50,
+                            y: -100,
                         }}
                         animate={{
                             clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",

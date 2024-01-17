@@ -3,8 +3,12 @@ import Navbar from "@components/Navbar";
 import Skills from "@components/Skills";
 import Projects from "@components/Projects";
 import Contact from "@components/Contact";
+import { useContext } from "react";
+import { CursorContext } from "./context/CursorContext";
+import { motion } from "framer-motion";
 
 function App() {
+    const { cursorVariants, cursorBg } = useContext(CursorContext);
     return (
         <>
             <main>
@@ -21,6 +25,12 @@ function App() {
                     </div>
                 </div>
             </footer>
+            <motion.div
+                variants={cursorVariants}
+                animate={cursorBg}
+                transition={{ type: "tween", ease: "backOut", duration: 0.5 }}
+                className="custom-mouse"
+            ></motion.div>
         </>
     );
 }

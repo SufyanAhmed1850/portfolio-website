@@ -25,6 +25,18 @@ html {
     scroll-behavior: smooth;
 }
 
+.custom-mouse {
+    width: 32px;
+    height: 32px;
+    background-color: var(--accent-);
+    position: fixed;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    border-radius: 50%;
+}
+
 input::placeholder,
 textarea::placeholder {
     font-family: "Space Grotesk", Inter, system-ui, Avenir, Helvetica, Arial,

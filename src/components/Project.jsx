@@ -1,9 +1,11 @@
 import { useState } from "react";
 import "@components/css/Project.css";
+import { useContext } from "react";
+import { CursorContext } from "../context/CursorContext";
 
 const Project = ({ img, title, techs, code, project }) => {
     const [showOverlay, setShowOverlay] = useState(false);
-
+    const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
     return (
         <div
             onMouseEnter={() => {
@@ -24,6 +26,9 @@ const Project = ({ img, title, techs, code, project }) => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="btn"
+                                onMouseEnter={() => mouseEnterHandler("small")}
+                                onMouseLeave={mouseLeaveHandler}
+                                style={{ cursor: "pointer" }}
                             >
                                 <span className="submit-btn">VIEW PROJECT</span>
                             </a>
@@ -32,6 +37,9 @@ const Project = ({ img, title, techs, code, project }) => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="btn"
+                                onMouseEnter={() => mouseEnterHandler("small")}
+                                onMouseLeave={mouseLeaveHandler}
+                                style={{ cursor: "pointer" }}
                             >
                                 <span className="submit-btn">VIEW CODE</span>
                             </a>
@@ -40,10 +48,25 @@ const Project = ({ img, title, techs, code, project }) => {
                 )}
             </div>
             <div>
-                <h3>{title}</h3>
+                <h3
+                    onMouseEnter={() => mouseEnterHandler("small")}
+                    onMouseLeave={mouseLeaveHandler}
+                    style={{ cursor: "default" }}
+                >
+                    {title}
+                </h3>
                 <div className="tech">
                     {techs.map((tech, ind) => {
-                        return <p key={tech}>{tech}</p>;
+                        return (
+                            <p
+                                key={tech}
+                                onMouseEnter={() => mouseEnterHandler("small")}
+                                onMouseLeave={mouseLeaveHandler}
+                                style={{ cursor: "default" }}
+                            >
+                                {tech}
+                            </p>
+                        );
                     })}
                 </div>
             </div>
