@@ -28,7 +28,7 @@ function App() {
             <motion.div
                 variants={cursorVariants}
                 animate={cursorBg}
-                transition={{ type: "tween", ease: "backOut", duration: 0.5 }}
+                transition={{ type: "tween", ease: "backOut", duration: 0.3 }}
                 className="custom-mouse"
             ></motion.div>
         </>
