@@ -7,6 +7,7 @@ import profilePicDesk from "@assets/image-profile-desktop.webp";
 import profilePicTab from "@assets/image-profile-tablet.webp";
 import profilePicMob from "@assets/image-profile-mobile.webp";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const Navbar = ({ profileImageBoolean, bottom }) => {
     const [src, setSrc] = useState();
@@ -46,7 +47,25 @@ const Navbar = ({ profileImageBoolean, bottom }) => {
             </div>
             {profileImageBoolean && (
                 <div className="nav-profile-image">
-                    <img src={src} alt="Profile Picture" />
+                    <motion.img
+                        initial={{
+                            clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",
+                            scale: 1.2,
+                            y: -50,
+                        }}
+                        animate={{
+                            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+                            scale: 1,
+                            y: 0,
+                        }}
+                        transition={{
+                            ease: [0.83, 0, 0.17, 1],
+                            duration: 2,
+                        }}
+                        fetchpriority="high"
+                        src={src}
+                        alt="Profile Picture"
+                    />
                 </div>
             )}
         </header>
