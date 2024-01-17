@@ -78,7 +78,14 @@ const Project = ({ img, title, techs, code, project }) => {
                         rel="noopener noreferrer"
                         className="btn"
                     >
-                        <span className="submit-btn">VIEW PROJECT</span>
+                        <span
+                            className="submit-btn"
+                            onMouseEnter={() => mouseEnterHandler("small")}
+                            onMouseLeave={mouseLeaveHandler}
+                            style={{ cursor: "pointer" }}
+                        >
+                            VIEW PROJECT
+                        </span>
                     </a>
                     <a
                         href={code}
@@ -86,7 +93,14 @@ const Project = ({ img, title, techs, code, project }) => {
                         rel="noopener noreferrer"
                         className="btn"
                     >
-                        <span className="submit-btn">VIEW CODE</span>
+                        <span
+                            className="submit-btn"
+                            onMouseEnter={() => mouseEnterHandler("small")}
+                            onMouseLeave={mouseLeaveHandler}
+                            style={{ cursor: "pointer" }}
+                        >
+                            VIEW CODE
+                        </span>
                     </a>
                 </div>
             )}
