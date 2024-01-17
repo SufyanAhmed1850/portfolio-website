@@ -81,17 +81,15 @@ const Navbar = ({ profileImageBoolean, bottom }) => {
                     <motion.img
                         initial={{
                             clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",
-                            scale: 1.2,
                             y: -100,
                         }}
                         animate={{
                             clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-                            scale: 1,
                             y: 0,
                         }}
                         transition={{
                             ease: [0.83, 0, 0.17, 1],
-                            duration: 2,
+                            duration: 1.5,
                         }}
                         fetchpriority="high"
                         src={src}
