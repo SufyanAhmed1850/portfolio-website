@@ -13,11 +13,18 @@ const CursorProvider = ({ children }) => {
             y: e.clientY,
         });
     };
+    const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
+        const handleMouseEnter = () => setIsVisible(true);
+        const handleMouseLeave = () => setIsVisible(false);
+        document.body.addEventListener("mouseenter", handleMouseEnter);
+        document.body.addEventListener("mouseleave", handleMouseLeave);
         window.addEventListener("mousemove", move);
         return () => {
             window.removeEventListener("mousemove", move);
+            document.body.removeEventListener("mouseenter", handleMouseEnter);
+            document.body.removeEventListener("mouseleave", handleMouseLeave);
         };
     }, []);
 
@@ -70,6 +77,7 @@ const CursorProvider = ({ children }) => {
     return (
         <CursorContext.Provider
             value={{
+                isVisible,
                 cursorVariants,
                 cursorBg,
                 mouseEnterHandler,

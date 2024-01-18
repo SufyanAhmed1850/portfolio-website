@@ -8,7 +8,7 @@ import { CursorContext } from "./context/CursorContext";
 import { motion } from "framer-motion";
 
 function App() {
-    const { cursorVariants, cursorBg } = useContext(CursorContext);
+    const { cursorVariants, cursorBg, isVisible } = useContext(CursorContext);
     return (
         <>
             <main>
@@ -26,9 +26,16 @@ function App() {
                 </div>
             </footer>
             <motion.div
+                style={{
+                    visibility: isVisible ? "visible" : "hidden",
+                }}
                 variants={cursorVariants}
                 animate={cursorBg}
-                transition={{ type: "tween", ease: "backOut", duration: 0.3 }}
+                transition={{
+                    type: "tween",
+                    ease: "backOut",
+                    duration: 0.3,
+                }}
                 className="custom-mouse"
             ></motion.div>
         </>
