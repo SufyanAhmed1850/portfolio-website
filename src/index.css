@@ -3,14 +3,18 @@
 :root {
     font-family: "Space Grotesk", Inter, system-ui, Avenir, Helvetica, Arial,
         sans-serif;
-
     text-rendering: optimizeLegibility;
-
-    --black-60-: #111;
+    --black-60-: #111111;
     --black-30-: #232323;
     --white-60-: #ffffff;
     --white-30-: #d9d9d9;
+    --white-10-: #868686;
     --accent-: #0aff9d;
+}
+
+::selection {
+    background-color: var(--accent-);
+    color: var(--black-30-);
 }
 
 *,
@@ -33,7 +37,7 @@ html {
     pointer-events: none;
     top: 0;
     left: 0;
-    z-index: 50;
+    z-index: 999999;
     border-radius: 50%;
 }
 
@@ -130,6 +134,41 @@ p {
     font-size: 1.125rem;
     line-height: 1.75rem;
     color: var(--white-30-);
+}
+
+/* ----- Scrollbar Styles For Firefox ----- */
+* {
+    scrollbar-color: var(--white-30-) var(--white-10-);
+    scrollbar-width: thin;
+}
+
+*::-moz-scrollbar {
+    width: 8px;
+}
+
+*::-moz-scrollbar-thumb {
+    background-color: var(--white-30-);
+    border-radius: 4px;
+}
+
+*::-moz-scrollbar-track {
+    background-color: var(--white-10-);
+}
+
+/* ----- Scrollbar Styles For Other Browsers ----- */
+*::-webkit-scrollbar-track {
+    border-radius: 4px;
+    background-color: var(--white-10-);
+}
+
+*::-webkit-scrollbar {
+    width: 8px;
+    background-color: var(--white-10-);
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: var(--white-30-);
 }
 
 @media (width <=768px) {

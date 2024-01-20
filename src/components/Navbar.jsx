@@ -1,5 +1,5 @@
-import "@components/css/Nav.css";
-import githubIcon from "@assets/github.svg";
+import "@components/css/Navbar.css";
+import IconGithub from "@assets/jsx/github";
 import linkedInIcon from "@assets/LinkedIn.svg";
 import twitterIcon from "@assets/twitter.svg";
 import whatsappIcon from "@assets/whatsapp.svg";
@@ -49,7 +49,7 @@ const Navbar = ({ profileImageBoolean, bottom }) => {
                     onMouseLeave={mouseLeaveHandler}
                     style={{ cursor: "pointer" }}
                 >
-                    <img src={githubIcon} alt="github" />
+                    <IconGithub />
                 </a>
                 <a
                     href="https://www.linkedin.com/in/SufyanAhmed1850"

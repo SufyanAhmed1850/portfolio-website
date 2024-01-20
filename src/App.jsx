@@ -1,30 +1,13 @@
-import Hero from "@components/Hero";
-import Navbar from "@components/Navbar";
-import Skills from "@components/Skills";
-import Projects from "@components/Projects";
-import Contact from "@components/Contact";
 import { useContext } from "react";
 import { CursorContext } from "./context/CursorContext";
 import { motion } from "framer-motion";
+import Home from "@pages/Home";
 
 function App() {
     const { cursorVariants, cursorBg, isVisible } = useContext(CursorContext);
     return (
         <>
-            <main>
-                <Navbar profileImageBoolean="true" />
-                <Hero />
-                <Skills />
-                <Projects />
-            </main>
-            <footer>
-                <div>
-                    <Contact />
-                    <div className="nav-bottom">
-                        <Navbar bottom="2.5rem" />
-                    </div>
-                </div>
-            </footer>
+            <Home />
             <motion.div
                 style={{
                     visibility: isVisible ? "visible" : "hidden",

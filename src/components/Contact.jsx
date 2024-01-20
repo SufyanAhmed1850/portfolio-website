@@ -1,5 +1,4 @@
-import { useState, useRef } from "react";
-import emailjs from "@emailjs/browser";
+import { useState } from "react";
 import "@components/css/Contact.css";
 import { useContext } from "react";
 import { CursorContext } from "../context/CursorContext";
@@ -9,28 +8,6 @@ const Contact = () => {
     const [qouteName, setQouteName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
-    const form = useRef();
-    const sendEmail = (e) => {
-        e.preventDefault();
-        emailjs
-            .sendForm(
-                import.meta.env.VITE_SERVICE_ID,
-                import.meta.env.VITE_TEMPLATE_ID,
-                form.current,
-                import.meta.env.VITE_PUBLIC_KEY,
-            )
-            .then(
-                (result) => {
-                    alert("Sent Successfully.");
-                    setQouteName("");
-                    setEmail("");
-                    setMessage("");
-                },
-                (error) => {
-                    alert("There was an error while sending your qoute.");
-                },
-            );
-    };
 
     return (
         <div className="contact" id="contact">
@@ -40,7 +17,7 @@ const Contact = () => {
                     onMouseLeave={mouseLeaveHandler}
                     style={{ cursor: "default" }}
                 >
-                    Contact
+                    Contact.
                 </h1>
                 <p
                     onMouseEnter={() => mouseEnterHandler("medium")}
@@ -52,7 +29,12 @@ const Contact = () => {
                     soon as possible.
                 </p>
             </div>
-            <form ref={form} onSubmit={sendEmail} className="qoute">
+            <form
+                onSubmit={(e) => {
+                    e.preventDefault();
+                }}
+                className="qoute"
+            >
                 <input
                     onMouseEnter={() => mouseEnterHandler("small")}
                     onMouseLeave={mouseLeaveHandler}
