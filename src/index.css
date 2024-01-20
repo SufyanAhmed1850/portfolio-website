@@ -6,11 +6,11 @@
 
     text-rendering: optimizeLegibility;
 
-    --black-60-: #151515;
-    --black-30-: #242424;
+    --black-60-: #111;
+    --black-30-: #232323;
     --white-60-: #ffffff;
     --white-30-: #d9d9d9;
-    --accent-: #4ee1a0;
+    --accent-: #0aff9d;
 }
 
 *,

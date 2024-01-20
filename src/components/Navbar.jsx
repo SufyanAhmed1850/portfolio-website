@@ -3,9 +3,6 @@ import githubIcon from "@assets/github.svg";
 import linkedInIcon from "@assets/LinkedIn.svg";
 import twitterIcon from "@assets/twitter.svg";
 import whatsappIcon from "@assets/whatsapp.svg";
-import profilePicDesk from "@assets/image-profile-desktop.webp";
-import profilePicTab from "@assets/image-profile-tablet.webp";
-import profilePicMob from "@assets/image-profile-mobile.webp";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useContext } from "react";
@@ -16,11 +13,17 @@ const Navbar = ({ profileImageBoolean, bottom }) => {
     const [src, setSrc] = useState();
     useEffect(() => {
         if (window.innerWidth > 768) {
-            setSrc(profilePicDesk);
+            setSrc(
+                "https://res.cloudinary.com/doigzeztt/image/upload/v1705742111/image-profile-desktop_zn5wf8.webp",
+            );
         } else if (window.innerWidth > 600 && window.innerWidth <= 768) {
-            setSrc(profilePicTab);
+            setSrc(
+                "https://res.cloudinary.com/doigzeztt/image/upload/v1705742111/image-profile-tablet_ltkoqr.webp",
+            );
         } else if (window.innerWidth <= 600) {
-            setSrc(profilePicMob);
+            setSrc(
+                "https://res.cloudinary.com/doigzeztt/image/upload/v1705742111/image-profile-mobile_fzrenn.webp",
+            );
         }
     }, []);
     return (
