@@ -1,6 +1,7 @@
 import "@components/css/Skill.css";
 import { useContext } from "react";
 import { CursorContext } from "../context/CursorContext";
+import Reveal from "@components/Reveal";
 
 const Skill = ({ title, exp }) => {
     const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
@@ -11,8 +12,12 @@ const Skill = ({ title, exp }) => {
             onMouseLeave={mouseLeaveHandler}
             style={{ cursor: "default" }}
         >
-            <h2>{title}</h2>
-            <p>{exp}</p>
+            <Reveal>
+                <h2>{title}</h2>
+            </Reveal>
+            <Reveal>
+                <p>{exp}</p>
+            </Reveal>
         </div>
     );
 };

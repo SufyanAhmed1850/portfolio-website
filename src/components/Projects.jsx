@@ -1,8 +1,8 @@
-import Button from "@components/Button";
 import Project from "@components/Project";
 import "@components/css/Projects.css";
 import { useContext } from "react";
 import { CursorContext } from "../context/CursorContext";
+import Reveal from "@components/Reveal";
 
 const Projects = () => {
     const projects = [
@@ -88,13 +88,15 @@ const Projects = () => {
     return (
         <div className="projects-container">
             <div className="header">
-                <h1
-                    onMouseEnter={() => mouseEnterHandler("large")}
-                    onMouseLeave={mouseLeaveHandler}
-                    style={{ cursor: "default" }}
-                >
-                    Projects.
-                </h1>
+                <Reveal>
+                    <h1
+                        onMouseEnter={() => mouseEnterHandler("large")}
+                        onMouseLeave={mouseLeaveHandler}
+                        style={{ cursor: "default" }}
+                    >
+                        Projects.
+                    </h1>
+                </Reveal>
             </div>
             <div className="body">
                 {projects.map((project, ind) => (

@@ -30,26 +30,23 @@
 }
 
 .project-title-hl {
-    width: 100%;
+    flex: 1;
     height: 1px;
     background: var(--white-30-);
     opacity: 0.3;
+    margin: 0 0.75rem;
 }
 
 .project-title {
     display: flex;
     align-items: center;
-    gap: 1.2rem;
+    justify-content: space-between;
     padding-bottom: 0.6rem;
-}
-
-.project-title h3 {
-    flex-shrink: 0;
-    max-width: calc(100% - 150px);
 }
 
 .project-title-urls {
     display: flex;
+    align-items: center;
     gap: 0.6rem;
 }
 
@@ -62,7 +59,7 @@
     color: var(--accent-);
 }
 
-.project-description {
+.project-description p {
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -77,12 +74,11 @@
     z-index: 10;
     height: 100vh;
     padding: 4.8rem 1.2rem;
-    -webkit-backdrop-filter: blur(12px);
-    backdrop-filter: blur(12px);
     overflow-y: scroll;
     display: flex;
     justify-content: center;
     cursor: pointer;
+    background: #1d1d1d40;
 }
 .project-modal {
     width: 100%;

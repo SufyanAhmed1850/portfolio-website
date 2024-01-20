@@ -40,6 +40,11 @@ html {
     border-radius: 50%;
 }
 
+input,
+textarea {
+    width: 100%;
+}
+
 input::placeholder,
 textarea::placeholder {
     font-family: "Space Grotesk", Inter, system-ui, Avenir, Helvetica, Arial,

@@ -1,34 +1,64 @@
 import "@components/css/Hero.css";
-import Button from "@components/Button";
 import { useContext } from "react";
 import { CursorContext } from "../context/CursorContext";
+import Reveal from "@components/Reveal";
 
 const Hero = () => {
     const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
+    const scrollToContact = () => {
+        const contactSection = document.getElementById("contact");
+
+        if (contactSection) {
+            const offsetTop = contactSection.offsetTop;
+
+            window.scrollTo({
+                top: offsetTop,
+                behavior: "smooth",
+            });
+        }
+    };
     return (
         <section>
             <div className="hero">
                 <div className="hero-title">
-                    <h1
-                        onMouseEnter={() => mouseEnterHandler("large")}
-                        onMouseLeave={mouseLeaveHandler}
-                        style={{ cursor: "default" }}
-                    >
-                        Nice to meet you! I’m{" "}
-                        <span className="name">Sufyan</span>.
-                    </h1>
+                    <Reveal>
+                        <h1
+                            style={{ lineHeight: "6.5rem", cursor: "default" }}
+                            onMouseEnter={() => mouseEnterHandler("large")}
+                            onMouseLeave={mouseLeaveHandler}
+                        >
+                            Nice to meet you! I’m{" "}
+                            <span className="name">Sufyan</span>.
+                        </h1>
+                    </Reveal>
                 </div>
                 <div className="hero-body">
-                    <p
-                        onMouseEnter={() => mouseEnterHandler("medium")}
-                        onMouseLeave={mouseLeaveHandler}
-                        style={{ cursor: "default" }}
-                    >
-                        Based in Pakistan, I’m a MERN stack developer passionate
-                        about building accessible web apps that users love.
-                    </p>
+                    <Reveal>
+                        <p
+                            onMouseEnter={() => mouseEnterHandler("medium")}
+                            onMouseLeave={mouseLeaveHandler}
+                            style={{ cursor: "default" }}
+                        >
+                            Based in Pakistan, I’m a MERN stack developer
+                            passionate about building accessible web apps that
+                            users love.
+                        </p>
+                    </Reveal>
                     <div>
-                        <Button />
+                        <Reveal>
+                            <div className="btn">
+                                <input
+                                    className="submit-btn"
+                                    onMouseEnter={() =>
+                                        mouseEnterHandler("small")
+                                    }
+                                    onMouseLeave={mouseLeaveHandler}
+                                    type="submit"
+                                    onClick={scrollToContact}
+                                    value={"CONTACT ME"}
+                                />
+                            </div>
+                        </Reveal>
                     </div>
                 </div>
             </div>
