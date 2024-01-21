@@ -32,7 +32,7 @@ const CursorProvider = ({ children }) => {
         default: {
             x: cursorPosition.x - 16,
             y: cursorPosition.y - 16,
-            backgroundColor: "#4ee1a0",
+            backgroundColor: "#0aff9d",
         },
         textLarge: {
             width: "150px",

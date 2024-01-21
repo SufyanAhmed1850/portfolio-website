@@ -8,7 +8,7 @@ const Skill = ({ title, exp }) => {
     return (
         <div
             className="skill"
-            onMouseEnter={() => mouseEnterHandler("large")}
+            onMouseEnter={() => mouseEnterHandler("small")}
             onMouseLeave={mouseLeaveHandler}
             style={{ cursor: "default" }}
         >
