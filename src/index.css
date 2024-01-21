@@ -140,39 +140,41 @@ p {
     color: var(--white-30-);
 }
 
-/* ----- Scrollbar Styles For Firefox ----- */
-* {
-    scrollbar-color: var(--white-30-) var(--white-10-);
-    scrollbar-width: thin;
-}
+@media (hover: hover) {
+    /* ----- Scrollbar Styles For Firefox ----- */
+    * {
+        scrollbar-color: var(--white-30-) var(--white-10-);
+        scrollbar-width: thin;
+    }
 
-*::-moz-scrollbar {
-    width: 8px;
-}
+    *::-moz-scrollbar {
+        width: 8px;
+    }
 
-*::-moz-scrollbar-thumb {
-    background-color: var(--white-30-);
-    border-radius: 4px;
-}
+    *::-moz-scrollbar-thumb {
+        background-color: var(--white-30-);
+        border-radius: 4px;
+    }
 
-*::-moz-scrollbar-track {
-    background-color: var(--white-10-);
-}
+    *::-moz-scrollbar-track {
+        background-color: var(--white-10-);
+    }
 
-/* ----- Scrollbar Styles For Other Browsers ----- */
-*::-webkit-scrollbar-track {
-    border-radius: 4px;
-    background-color: var(--white-10-);
-}
+    /* ----- Scrollbar Styles For Other Browsers ----- */
+    *::-webkit-scrollbar-track {
+        border-radius: 4px;
+        background-color: var(--white-10-);
+    }
 
-*::-webkit-scrollbar {
-    width: 8px;
-    background-color: var(--white-10-);
-}
+    *::-webkit-scrollbar {
+        width: 8px;
+        background-color: var(--white-10-);
+    }
 
-*::-webkit-scrollbar-thumb {
-    border-radius: 4px;
-    background-color: var(--white-30-);
+    *::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: var(--white-30-);
+    }
 }
 
 @media (width <=768px) {

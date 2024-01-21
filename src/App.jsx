@@ -10,6 +10,10 @@ function App() {
             ? "dark"
             : "light",
     );
+    const [hasPointingDevice, setHasPointingDevice] = useState(
+        window.matchMedia("(pointer:fine)").matches,
+    );
+    console.log(hasPointingDevice);
     useEffect(() => {
         const favicon = document.getElementById("favicon");
         if (favicon) {
@@ -25,26 +29,40 @@ function App() {
             setSystemTheme(mediaQuery.matches ? "dark" : "light");
         };
         mediaQuery.addEventListener("change", handleChange);
+        const pointingDeviceQuery = window.matchMedia("(pointer:fine)");
+        const handlePointingDeviceChange = () => {
+            setHasPointingDevice(pointingDeviceQuery.matches);
+        };
+        pointingDeviceQuery.addEventListener(
+            "change",
+            handlePointingDeviceChange,
+        );
         return () => {
             mediaQuery.removeEventListener("change", handleChange);
+            pointingDeviceQuery.removeEventListener(
+                "change",
+                handlePointingDeviceChange,
+            );
         };
     }, []);
     return (
         <>
             <Home />
-            <motion.div
-                style={{
-                    visibility: isVisible ? "visible" : "hidden",
-                }}
-                variants={cursorVariants}
-                animate={cursorBg}
-                transition={{
-                    type: "tween",
-                    ease: "backOut",
-                    duration: 0.3,
-                }}
-                className="custom-mouse"
-            ></motion.div>
+            {hasPointingDevice && (
+                <motion.div
+                    style={{
+                        visibility: isVisible ? "visible" : "hidden",
+                    }}
+                    variants={cursorVariants}
+                    animate={cursorBg}
+                    transition={{
+                        type: "tween",
+                        ease: "backOut",
+                        duration: 0.3,
+                    }}
+                    className="custom-mouse"
+                ></motion.div>
+            )}
         </>
     );
 }
