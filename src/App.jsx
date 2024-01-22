@@ -13,7 +13,6 @@ function App() {
     const [hasPointingDevice, setHasPointingDevice] = useState(
         window.matchMedia("(pointer:fine)").matches,
     );
-    console.log(hasPointingDevice);
     useEffect(() => {
         const favicon = document.getElementById("favicon");
         if (favicon) {
