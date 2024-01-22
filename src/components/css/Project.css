@@ -19,7 +19,7 @@
     position: absolute;
     bottom: 0;
     left: 50%;
-    translate: -50% 20%;
+    translate: -50% 8%;
     transition: all 0.25s;
     border-radius: 0.4rem;
 }
