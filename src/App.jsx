@@ -18,8 +18,8 @@ function App() {
         if (favicon) {
             favicon.href =
                 systemTheme === "dark"
-                    ? "./src/assets/favicon-light.svg"
-                    : "./src/assets/favicon-dark.svg";
+                    ? "https://res.cloudinary.com/dke5jqhus/image/upload/f_webp/v1705847763/Portfolio/oklvsql2vlkze7p3ggmq.svg"
+                    : "https://res.cloudinary.com/dke5jqhus/image/upload/f_webp/v1705847763/Portfolio/skiowwakseerwteqvulo.svg";
         }
     }, [systemTheme]);
     useEffect(() => {
