@@ -19,8 +19,8 @@ function App() {
         if (favicon) {
             favicon.href =
                 systemTheme === "dark"
-                    ? "https://res.cloudinary.com/dke5jqhus/image/upload/f_webp/v1705847763/Portfolio/oklvsql2vlkze7p3ggmq.svg"
-                    : "https://res.cloudinary.com/dke5jqhus/image/upload/f_webp/v1705847763/Portfolio/skiowwakseerwteqvulo.svg";
+                    ? "https://res.cloudinary.com/dke5jqhus/image/upload/f_webp/v1705847763/Portfolio/qs5qoznwzw2nijj9tjpy.svg"
+                    : "https://res.cloudinary.com/dke5jqhus/image/upload/f_webp/v1705847763/Portfolio/fo0m2mlaty4d7ssdt40y.svg";
         }
     }, [systemTheme]);
     useEffect(() => {
