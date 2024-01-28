@@ -3,12 +3,22 @@
 :root {
     font-family: "Space Grotesk", sans-serif;
     text-rendering: optimizeLegibility;
-    --black-60-: #111111;
-    --black-30-: #232323;
-    --white-60-: #ffffff;
-    --white-30-: #d9d9d9;
+    /* --black-60-: #0d0d0e;
+    --black-30-: #121215;
+    --white-60-: #e6e6e6;
+    --white-30-: #b3b6be;
+    --white-10-: #504f52;
+    --accent-: #7afa9d;
+    --error-: #fa7a7a; */
+    --black-60-: #1f1f1f;
+    --black-30-: #303030;
+    --white-60-: #e0ded9;
+    --white-30-: #b4aeb9;
     --white-10-: #868686;
-    --accent-: #0aff9d;
+    --accent-: #A58AE3;
+    /* --accent-: #86abd4; */
+    /* --accent-: #fa9338; */
+    --error-: #fa7a7a;
 }
 
 ::selection {
@@ -22,10 +32,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
 }
 
 .custom-mouse {
@@ -36,7 +57,7 @@ html {
     pointer-events: none;
     top: 0;
     left: 0;
-    z-index: 999999;
+    z-index: 99999999;
     border-radius: 50%;
 }
 
@@ -182,7 +203,7 @@ p {
         font-size: 4.5rem;
     }
     footer {
-        margin-top: 6.25rem;
+        margin-top: 5rem;
         padding-top: 3.75rem;
     }
 }

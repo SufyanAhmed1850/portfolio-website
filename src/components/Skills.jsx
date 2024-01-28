@@ -3,15 +3,16 @@ import "@components/css/Skills.css";
 
 const Skills = () => {
     const skills = [
-        { title: "HTML", exp: "1 Year Experience" },
-        { title: "CSS", exp: "1 Year Experience" },
-        { title: "Javascript", exp: "1 Year Experience" },
-        { title: "Firebase", exp: "1 Year Experience" },
-        { title: "GSAP", exp: "1 Year Experience" },
-        { title: "ReactJS", exp: "1 Year Experience" },
-        { title: "NodeJS", exp: "1 Year Experience" },
-        { title: "ExpressJS", exp: "1 Year Experience" },
-        { title: "MongoDB", exp: "1 Year Experience" },
+        { title: "HTML", exp: "6 Months Experience" },
+        { title: "CSS", exp: "6 Months Experience" },
+        { title: "Javascript", exp: "6 Months Experience" },
+        { title: "Firebase", exp: "6 Months Experience" },
+        { title: "GSAP", exp: "6 Months Experience" },
+        { title: "ReactJS", exp: "3 Months Experience" },
+        { title: "NodeJS", exp: "3 Months Experience" },
+        { title: "ExpressJS", exp: "3 Months Experience" },
+        { title: "MongoDB", exp: "3 Months Experience" },
+        { title: "Framer-Motion", exp: "2 Months Experience" },
     ];
     return (
         <div className="skills-container">

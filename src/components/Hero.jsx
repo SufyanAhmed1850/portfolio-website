@@ -1,6 +1,6 @@
 import "@components/css/Hero.css";
 import { useContext } from "react";
-import { CursorContext } from "../context/CursorContext";
+import { CursorContext } from "@context/CursorContext";
 import Reveal from "@components/Reveal";
 
 const Hero = () => {
@@ -23,12 +23,13 @@ const Hero = () => {
                 <div className="hero-title">
                     <Reveal>
                         <h1
-                            style={{ lineHeight: "6.5rem", cursor: "default" }}
+                            style={{ cursor: "default" }}
                             onMouseEnter={() => mouseEnterHandler("large")}
                             onMouseLeave={mouseLeaveHandler}
                         >
                             Nice to meet you! I’m{" "}
-                            <span className="name">Sufyan</span>.
+                            <span className="name">Sufyan</span>
+                            <span style={{ color: "var(--accent-)" }}>.</span>
                         </h1>
                     </Reveal>
                 </div>
