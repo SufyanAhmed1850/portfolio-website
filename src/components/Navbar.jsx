@@ -11,43 +11,43 @@ import Reveal from "@components/Reveal";
 
 const Navbar = ({ profileImageBoolean, bottom }) => {
     const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
-    // const [src, setSrc] = useState();
-    // const [profileImageLoaded, setProfileImageLoaded] = useState(false);
-    // const [animationState, setAnimationState] = useState("hidden");
+    const [src, setSrc] = useState();
+    const [profileImageLoaded, setProfileImageLoaded] = useState(false);
+    const [animationState, setAnimationState] = useState("hidden");
 
-    // const handleImageLoad = useCallback(() => {
-    //     setAnimationState("visible");
-    // }, []);
+    const handleImageLoad = useCallback(() => {
+        setAnimationState("visible");
+    }, []);
 
-    // const imageVariants = {
-    //     hidden: {
-    //         clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",
-    //         y: -100,
-    //     },
-    //     visible: {
-    //         clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-    //         y: 0,
-    //     },
-    // };
+    const imageVariants = {
+        hidden: {
+            clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",
+            y: -100,
+        },
+        visible: {
+            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+            y: 0,
+        },
+    };
 
-    // const updateImageSrc = useCallback(() => {
-    //     if (window.innerWidth > 768) {
-    //         return "https://res.cloudinary.com/doigzeztt/image/upload/w_445,h_720/v1705742111/image-profile-desktop_zn5wf8.webp";
-    //     } else if (window.innerWidth > 600 && window.innerWidth <= 768) {
-    //         return "https://res.cloudinary.com/doigzeztt/image/upload/w_322,h_600/v1705742111/image-profile-tablet_ltkoqr.webp";
-    //     } else {
-    //         return "https://res.cloudinary.com/doigzeztt/image/upload/f_webp/v1706038916/image-profile-mobile_rbg44m.jpg";
-    //     }
-    // }, []);
+    const updateImageSrc = useCallback(() => {
+        if (window.innerWidth > 768) {
+            return "https://res.cloudinary.com/dke5jqhus/image/upload/f_webp/v1706643218/profile%20pic/pbdpyn2dtc78msdqmgan.jpg";
+        } else if (window.innerWidth > 600 && window.innerWidth <= 768) {
+            return "https://res.cloudinary.com/dke5jqhus/image/upload/f_webp/v1706643218/profile%20pic/y1bt8fxh3sax4oscbfpr.jpg";
+        } else {
+            return "https://res.cloudinary.com/dke5jqhus/image/upload/f_webp/v1706643218/profile%20pic/jzsyxnxzs796zcaq0hzn.jpg";
+        }
+    }, []);
 
-    // useEffect(() => {
-    //     setSrc(updateImageSrc());
-    //     function handleResize() {
-    //         setSrc(updateImageSrc());
-    //     }
-    //     window.addEventListener("resize", handleResize);
-    //     return () => window.removeEventListener("resize", handleResize);
-    // }, [updateImageSrc]);
+    useEffect(() => {
+        setSrc(updateImageSrc());
+        function handleResize() {
+            setSrc(updateImageSrc());
+        }
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, [updateImageSrc]);
     return (
         <header
             className="nav-header"
@@ -112,7 +112,7 @@ const Navbar = ({ profileImageBoolean, bottom }) => {
                     </a>
                 </Reveal>
             </div>
-            {/* {profileImageBoolean && (
+            {profileImageBoolean && (
                 <div
                     className={`nav-profile-image ${
                         profileImageLoaded ? "" : "profile-loading"
@@ -135,7 +135,7 @@ const Navbar = ({ profileImageBoolean, bottom }) => {
                         }}
                     />
                 </div>
-            )} */}
+            )}
         </header>
     );
 };
