@@ -69,7 +69,7 @@ const Navbar = ({ profileImageBoolean, bottom }) => {
             <div className="icons">
                 <Reveal>
                     <a
-                        href="https://github.com/shahroz769"
+                        href="https://github.com/SufyanAhmed1850"
                         target="_blank"
                         onMouseEnter={() => mouseEnterHandler("small")}
                         onMouseLeave={mouseLeaveHandler}
@@ -80,7 +80,7 @@ const Navbar = ({ profileImageBoolean, bottom }) => {
                 </Reveal>
                 <Reveal>
                     <a
-                        href="https://www.linkedin.com/in/shahroz769"
+                        href="https://www.linkedin.com/in/sufyanahmed1850"
                         target="_blank"
                         onMouseEnter={() => mouseEnterHandler("small")}
                         onMouseLeave={mouseLeaveHandler}
@@ -91,7 +91,7 @@ const Navbar = ({ profileImageBoolean, bottom }) => {
                 </Reveal>
                 <Reveal>
                     <a
-                        href="https://wa.me/923072800769"
+                        href="https://wa.me/923327319831"
                         target="_blank"
                         onMouseEnter={() => mouseEnterHandler("small")}
                         onMouseLeave={mouseLeaveHandler}
@@ -102,7 +102,7 @@ const Navbar = ({ profileImageBoolean, bottom }) => {
                 </Reveal>
                 <Reveal>
                     <a
-                        href="https://twitter.com/devshahroz"
+                        href="https://twitter.com/devsufyan"
                         target="_blank"
                         onMouseEnter={() => mouseEnterHandler("small")}
                         onMouseLeave={mouseLeaveHandler}
